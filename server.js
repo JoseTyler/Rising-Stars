@@ -1,26 +1,22 @@
-const express = require('express');
 const app = express();
+const express = require('express');
+const routes = require('./routes/index.js')
 
 app.use(express.json());
+app.use('/api/v1', routes)
 
 
-
-
-// const routes = require('./routes/index.js')
 
 // app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(`${__dirname}/client/build`))
 
-// app.use('/api/v1', routes)
 // app.get('/', (req,res) => {
 //   res.send('Hello Again Jose!')
 // })
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`)
 })
-
-
 
 
 

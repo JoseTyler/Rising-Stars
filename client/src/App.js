@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import ModelForm from './components/ModelForm'
+import ModelList from './components/ModelList'
+import ActorForm from './components/ActorForm'
+import ActorList from './components/ActorList'
+import ArtistForm from './components/ArtistForm'
+import ArtistList from './components/ArtistList'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <div> 
+          <Switch>
+            <Route exact path="/" component={ModelForm}/>
+            <Route exact path="/model" component={ModelForm}/>
+            <Route exact path="/models" component={ModelList}/>
+            <Route exact path="/actor" component={ActorForm}/>
+            <Route exact path="/actors" component={ActorList}/>
+            <Route exact path="/artist" component={ArtistForm}/>
+            <Route exact path="/artists" component={ArtistList}/>
+          </Switch>
+        </div>
+      </Router>
   );
 }
 
