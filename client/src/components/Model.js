@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components'
 
+
 class Model extends Component {
     state = {
         showForm: false,
@@ -27,14 +28,14 @@ class Model extends Component {
 
     deleteModel = () => {
         console.log(this.props._id)
-        axios.delete(`api/v1/model/${this.props._id}`)
+        axios.delete(`api/v1/${this.props._id}`)
         this.props.getModels()
     }
 
     updateModel = (e) => {
         e.preventDefault()
         console.log(this.state.formInfo)
-        axios.put(`/api/v1/model/${this.props._id}`, this.state.formInfo)
+        axios.put(`/api/v1/${this.props._id}`, this.state.formInfo)
         this.swapForm()
         this.props.getModels()
     }
@@ -64,14 +65,14 @@ class Model extends Component {
                         <input id="location" name="location" type="text" placeholder={this.props.location} onChange={this.handleChange} />
                         <button onClick={this.setState.swapForm} >SUBMIT EDIT!</button>
                     </form>
-                    : <Info>
-                        <P>Name: {this.props.name}</P>
-                        <P>DOB: {this.props.dob}</P>
-                        <P>Ethnicity: {this.props.ethnicity}</P>
-                        <P>Location: {this.props.location}</P>
-                        <Button onClick={this.swapForm}>Edit Model</Button>
-                        <Button onClick={this.deleteModel}>Delete Model</Button>
-                    </Info>
+                    : <info>
+                        <p>Name: {this.props.name}</p>
+                        <p>DOB: {this.props.dob}</p>
+                        <p>Ethnicity: {this.props.ethnicity}</p>
+                        <p>Location: {this.props.location}</p>
+                        <button onClick={this.swapForm}>Edit Model</button>
+                        <button onClick={this.deleteModel}>Delete Model</button>
+                    </info>
                 }
             </div>
         );

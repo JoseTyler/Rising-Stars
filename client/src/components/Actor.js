@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components'
 
+
+
 class Actor extends Component {
     state = {
         showForm: false,
@@ -64,14 +66,14 @@ class Actor extends Component {
                         <input id="location" name="location" type="text" placeholder={this.props.location} onChange={this.handleChange} />
                         <button onClick={this.setState.swapForm} >Submit Edit!</button>
                     </form>
-                    : <Info>
-                        <P>Name: {this.props.name}</P>
-                        <P>DOB: {this.props.dob}</P>
-                        <P>Ethnicity: {this.props.ethnicity}</P>
-                        <P>Location: {this.props.location}</P>
-                        <Button onClick={this.swapForm}>Edit Actor</Button>
-                        <Button onClick={this.deleteActor}>Delete Actor</Button>
-                    </Info>
+                    : <info>
+                        <p>Name: {this.props.name}</p>
+                        <p>DOB: {this.props.dob}</p>
+                        <p>Ethnicity: {this.props.ethnicity}</p>
+                        <p>Location: {this.props.location}</p>
+                        <button onClick={this.swapForm}>Edit Actor</button>
+                        <button onClick={this.deleteActor}>Delete Actor</button>
+                    </info>
                 }
             </div>
         );

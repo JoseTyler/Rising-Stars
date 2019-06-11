@@ -12,10 +12,9 @@ import ArtistList from './components/ArtistList'
 function App() {
   return (
     <Router>
-        <div> 
+        <div>
           <Switch>
             <Route exact path="/" component={ModelForm}/>
-            <Route exact path="/model" component={ModelForm}/>
             <Route exact path="/models" component={ModelList}/>
             <Route exact path="/actor" component={ActorForm}/>
             <Route exact path="/actors" component={ActorList}/>

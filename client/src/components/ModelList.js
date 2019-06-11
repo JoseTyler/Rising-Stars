@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { Link } from "react-router-dom"
 
 
+
+
 // ModelList Component
 
 class ModelList extends Component {
@@ -17,7 +19,7 @@ class ModelList extends Component {
     }
 
     getModels = () => {
-        axios.get('/api/v1/model').then((res) => {
+        axios.get('/api/v1/').then((res) => {
             this.setState({ modelInfo: res.data })
         })
     }
@@ -25,8 +27,8 @@ class ModelList extends Component {
     render() {
         return (
             <div>
-                <Body>
-                <Header>
+                <body>
+                <header>
                         <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
                         <Link to={'/model'} style={{ textDecoration: 'none', color: 'white' }}>Model Signup</Link>
                         <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' }}>Models</Link>
@@ -34,11 +36,11 @@ class ModelList extends Component {
                         <Link to={'/actors'} style={{ textDecoration: 'none', color: 'white' }}>Actors</Link>
                         <Link to={'/artist'} style={{ textDecoration: 'none', color: 'white' }}>Artist Signup</Link>
                         <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white' }}>Artists</Link>
-                    </Header>
+                    </header>
                     {this.state.modelInfo.map((spot, index) => {
                         return (
 
-                            <Squad
+                            <Model
                                 key={index}
                                 name={spot.name}
                                 dob={spot.dob}
@@ -50,7 +52,7 @@ class ModelList extends Component {
                         )
 
                     })}
-                </Body>
+                </body>
             </div>
         );
     }

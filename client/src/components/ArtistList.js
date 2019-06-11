@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { Link } from "react-router-dom"
 
 
+
+
 // ArtistList Component
 
 class ArtistList extends Component {
@@ -25,8 +27,8 @@ class ArtistList extends Component {
     render() {
         return (
             <div>
-                <Body>
-                <Header>
+                <body>
+                <header>
                         <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
                         <Link to={'/model'} style={{ textDecoration: 'none', color: 'white' }}>Model Signup</Link>
                         <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' }}>Models</Link>
@@ -34,7 +36,7 @@ class ArtistList extends Component {
                         <Link to={'/actors'} style={{ textDecoration: 'none', color: 'white' }}>Actors</Link>
                         <Link to={'/artist'} style={{ textDecoration: 'none', color: 'white' }}>Artist Signup</Link>
                         <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white' }}>Artists</Link>
-                    </Header>
+                    </header>
                     {this.state.artistInfo.map((spot, index) => {
                         return (
 
@@ -50,7 +52,7 @@ class ArtistList extends Component {
                         )
 
                     })}
-                </Body>
+                </body>
             </div>
         );
     }

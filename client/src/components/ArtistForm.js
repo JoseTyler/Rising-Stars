@@ -3,7 +3,11 @@ import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
 
-// SquadForm Component
+
+
+
+
+// ArtistForm Component
 
 class ArtistForm extends Component {
     state = {
@@ -34,8 +38,8 @@ class ArtistForm extends Component {
         }
         return (
             <div>
-                <Body>
-                    <Header>
+                <body>
+                    <header>
                         <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
                         <Link to={'/model'} style={{ textDecoration: 'none', color: 'white' }}>Model Signup</Link>
                         <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' }}>Models</Link>
@@ -43,20 +47,20 @@ class ArtistForm extends Component {
                         <Link to={'/actors'} style={{ textDecoration: 'none', color: 'white' }}>Actors</Link>
                         <Link to={'/artist'} style={{ textDecoration: 'none', color: 'white' }}>Artist Signup</Link>
                         <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white' }}>Artists</Link>
-                    </Header>
+                    </header>
 
-                    <Form onSubmit={this.newArtist}>
+                    <form onSubmit={this.newArtist}>
                         <label htmlFor="name">Name:</label>
-                        <Inputy id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
+                        <inputy id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
                         <label htmlFor="dob">DOB:</label>
-                        <Inputy id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
+                        <inputy id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
                         <label htmlFor="Ethnicity">Ethnicity:</label>
-                        <Inputy id="Ethnicity" name="Ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
+                        <inputy id="Ethnicity" name="Ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
                         <label htmlFor="Location">Location:</label>
-                        <Inputy id="Location" name="Location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
-                        <Button type="submit">Sign Up Model!</Button>
-                    </Form>
-                </Body>
+                        <inputy id="Location" name="Location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
+                        <button type="submit">Sign Up Model!</button>
+                    </form>
+                </body>
             </div>
         );
     }
