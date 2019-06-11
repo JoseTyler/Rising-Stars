@@ -39,13 +39,13 @@ class ModelForm extends Component {
             <div>
                 <body>
                     <header>
-                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
-                        <Link to={'/model'} style={{ textDecoration: 'none', color: 'white' }}>Model Signup</Link>
-                        <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' }}>Models</Link>
-                        <Link to={'/actor'} style={{ textDecoration: 'none', color: 'white' }}>Actor Signup</Link>
-                        <Link to={'/actors'} style={{ textDecoration: 'none', color: 'white' }}>Actors</Link>
-                        <Link to={'/artist'} style={{ textDecoration: 'none', color: 'white' }}>Artist Signup</Link>
-                        <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white' }}>Artists</Link>
+                        <Link to={'/'} style={{ textDecoration: 'none', color: 'red' }}>Home</Link>
+                        <Link to={'/model'} style={{ textDecoration: 'none', color: 'red' }}>Model Signup</Link>
+                        <Link to={'/models'} style={{ textDecoration: 'none', color: 'red' }}>Models</Link>
+                        <Link to={'/actor'} style={{ textDecoration: 'none', color: 'red' }}>Actor Signup</Link>
+                        <Link to={'/actors'} style={{ textDecoration: 'none', color: 'red' }}>Actors</Link>
+                        <Link to={'/artist'} style={{ textDecoration: 'none', color: 'red' }}>Artist Signup</Link>
+                        <Link to={'/artists'} style={{ textDecoration: 'none', color: 'red' }}>Artists</Link>
                     </header>
 
                     <form onSubmit={this.newModel}>

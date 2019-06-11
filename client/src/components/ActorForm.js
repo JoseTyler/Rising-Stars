@@ -39,24 +39,24 @@ class ActorForm extends Component {
             <div>
                 <body>
                     <header>
-                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
-                        <Link to={'/model'} style={{ textDecoration: 'none', color: 'white' }}>Model Signup</Link>
-                        <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' }}>Models</Link>
-                        <Link to={'/actor'} style={{ textDecoration: 'none', color: 'white' }}>Actor Signup</Link>
-                        <Link to={'/actors'} style={{ textDecoration: 'none', color: 'white' }}>Actors</Link>
-                        <Link to={'/artist'} style={{ textDecoration: 'none', color: 'white' }}>Artist Signup</Link>
-                        <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white' }}>Artists</Link>
+                        <Link to={'/'} style={{ textDecoration: 'none', color: 'red' }}>Home</Link>
+                        <Link to={'/model'} style={{ textDecoration: 'none', color: 'red' }}>Model Signup</Link>
+                        <Link to={'/models'} style={{ textDecoration: 'none', color: 'red' }}>Models</Link>
+                        <Link to={'/actor'} style={{ textDecoration: 'none', color: 'red' }}>Actor Signup</Link>
+                        <Link to={'/actors'} style={{ textDecoration: 'none', color: 'red' }}>Actors</Link>
+                        <Link to={'/artist'} style={{ textDecoration: 'none', color: 'red' }}>Artist Signup</Link>
+                        <Link to={'/artists'} style={{ textDecoration: 'none', color: 'red' }}>Artists</Link>
                     </header>
 
                     <form onSubmit={this.newActor}>
                         <label htmlFor="name">Name:</label>
-                        <inputy id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
+                        <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
                         <label htmlFor="dob">DOB:</label>
-                        <inputy id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
-                        <label htmlFor="Ethnicity">Ethnicity:</label>
-                        <inputy id="Ethnicity" name="Ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
-                        <label htmlFor="Location">Location:</label>
-                        <inputy id="Location" name="Location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
+                        <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
+                        <label htmlFor="ethnicity">Ethnicity:</label>
+                        <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
+                        <label htmlFor="location">Location:</label>
+                        <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
                         <button type="submit">Sign Up Actor!</button>
                     </form>
                 </body>

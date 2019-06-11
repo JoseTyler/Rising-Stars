@@ -37,7 +37,7 @@ class Artist extends Component {
     updateArtist = (e) => {
         e.preventDefault()
         console.log(this.state.formInfo)
-        axios.put(`/api/v1/model/${this.props._id}`, this.state.formInfo)
+        axios.put(`/api/v1/artist/${this.props._id}`, this.state.formInfo)
         this.swapForm()
         this.props.getArtists()
     }
