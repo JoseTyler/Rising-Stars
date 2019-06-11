@@ -6,7 +6,7 @@ import ActorForm from './components/ActorForm'
 import ActorList from './components/ActorList'
 import ArtistForm from './components/ArtistForm'
 import ArtistList from './components/ArtistList'
-
+import Home from './components/Home'
 
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
     <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={ModelForm}/>
+          <Route exact path="/" component={Home}/>
+            <Route exact path="/model" component={ModelForm}/>
             <Route exact path="/models" component={ModelList}/>
             <Route exact path="/actor" component={ActorForm}/>
             <Route exact path="/actors" component={ActorList}/>

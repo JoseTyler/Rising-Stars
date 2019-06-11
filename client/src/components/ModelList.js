@@ -19,7 +19,7 @@ class ModelList extends Component {
     }
 
     getModels = () => {
-        axios.get('/api/v1/').then((res) => {
+        axios.get('/api/v1/model/').then((res) => {
             this.setState({ modelInfo: res.data })
         })
     }
@@ -27,15 +27,17 @@ class ModelList extends Component {
     render() {
         return (
             <div>
-                <body>
+                im the model list
+               
                 <header>
-                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
-                        <Link to={'/model'} style={{ textDecoration: 'none', color: 'white' }}>Model Signup</Link>
-                        <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' }}>Models</Link>
-                        <Link to={'/actor'} style={{ textDecoration: 'none', color: 'white' }}>Actor Signup</Link>
-                        <Link to={'/actors'} style={{ textDecoration: 'none', color: 'white' }}>Actors</Link>
-                        <Link to={'/artist'} style={{ textDecoration: 'none', color: 'white' }}>Artist Signup</Link>
-                        <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white' }}>Artists</Link>
+                    
+                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white', background: 'blue'}}>HOME</Link>
+                        <Link to={'/model'} style={{ textDecoration: 'none', color: 'white', background: 'blue'}}>Model Signup</Link>
+                        <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' , background: 'blue'}}>Models</Link>
+                        <Link to={'/actor'} style={{ textDecoration: 'none', color: 'white', background: 'blue' }}>Actor Signup</Link>
+                        <Link to={'/actors'} style={{ textDecoration: 'none', color: 'white', background: 'blue' }}>Actors</Link>
+                        <Link to={'/artist'} style={{ textDecoration: 'none', color: 'white', background: 'blue' }}>Artist Signup</Link>
+                        <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white', background: 'blue' }}>Artists</Link>
                     </header>
                     {this.state.modelInfo.map((spot, index) => {
                         return (
@@ -52,7 +54,7 @@ class ModelList extends Component {
                         )
 
                     })}
-                </body>
+               
             </div>
         );
     }

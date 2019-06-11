@@ -3,10 +3,10 @@ const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
 const Actor = new Schema({
-    Name: String,
-    DOB: String,
-    Ethnicity: String,
-    Location: String
+    name: String,
+    dob: String,
+    ethnicity: String,
+    location: String
 })
 
 module.exports = mongoose.model('Actor', Actor)

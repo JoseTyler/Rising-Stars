@@ -26,7 +26,8 @@ class ModelForm extends Component {
 
     newModel = (e) => {
         e.preventDefault()
-        axios.post("api/v1/", this.state.formInfo)
+        console.log(this.state.formInfo)
+        axios.post("/api/v1/model/", this.state.formInfo)
         this.setState({ redirect: true })
     }
 
@@ -38,7 +39,7 @@ class ModelForm extends Component {
             <div>
                 <body>
                     <header>
-                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
+                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
                         <Link to={'/model'} style={{ textDecoration: 'none', color: 'white' }}>Model Signup</Link>
                         <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' }}>Models</Link>
                         <Link to={'/actor'} style={{ textDecoration: 'none', color: 'white' }}>Actor Signup</Link>
@@ -49,13 +50,13 @@ class ModelForm extends Component {
 
                     <form onSubmit={this.newModel}>
                         <label htmlFor="name">Name:</label>
-                        <inputy id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
+                        <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
                         <label htmlFor="dob">DOB:</label>
-                        <inputy id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
-                        <label htmlFor="Ethnicity">Ethnicity:</label>
-                        <inputy id="Ethnicity" name="Ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
-                        <label htmlFor="Location">Location:</label>
-                        <inputy id="Location" name="Location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
+                        <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
+                        <label htmlFor="ethnicity">Ethnicity:</label>
+                        <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
+                        <label htmlFor="location">Location:</label>
+                        <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
                         <button type="submit">Sign Up Model!</button>
                     </form>
                 </body>
