@@ -14,7 +14,7 @@ function App() {
     <Router>
         <div>
           <Switch>
-          <Route exact path="/" component={Home}/>
+            <Route exact path="/" component={Home}/>
             <Route exact path="/model" component={ModelForm}/>
             <Route exact path="/models" component={ModelList}/>
             <Route exact path="/actor" component={ActorForm}/>

@@ -8,14 +8,14 @@ import styled from 'styled-components';
 
 
 // ArtistForm Component
-
 class ArtistForm extends Component {
     state = {
         formInfo: {
             name: '',
             dob: '',
             ethnicity: '',
-            location: ''
+            location: '',
+            photo: ''
         },
         redirect: false,
     }
@@ -58,6 +58,8 @@ class ArtistForm extends Component {
                         <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
                         <label htmlFor="location">Location:</label>
                         <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
+                        <label htmlFor="photo">Photo:</label>
+                        <input id="photo" name="photo" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         <button type="submit">Sign Up Model!</button>
                     </form>
                 </body>

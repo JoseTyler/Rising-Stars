@@ -70,6 +70,14 @@ class Model extends Component {
                         <p>DOB: {this.props.dob}</p>
                         <p>Ethnicity: {this.props.ethnicity}</p>
                         <p>Location: {this.props.location}</p>
+                        <p>Photo1: {this.props.photo1}</p>
+                        <img src={this.props.photo1}/>
+                        <p>Photo2: {this.props.photo2}</p>
+                        <img src={this.props.photo2}/>
+                        <p>Photo3: {this.props.photo3}</p>
+                        <img src={this.props.photo3}/>
+                        <p>Photo4: {this.props.photo4}</p>
+                        <img src={this.props.photo4}/>
                         <button onClick={this.swapForm}>Edit Model</button>
                         <button onClick={this.deleteModel}>Delete Model</button>
                     </div>

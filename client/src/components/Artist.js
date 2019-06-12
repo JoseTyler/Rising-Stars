@@ -72,6 +72,8 @@ class Artist extends Component {
                         <p>DOB: {this.props.dob}</p>
                         <p>Ethnicity: {this.props.ethnicity}</p>
                         <p>Location: {this.props.location}</p>
+                        <p>Photo1: {this.props.photo1}</p>
+                        <img src={this.props.photo1}/>
                         <button onClick={this.swapForm}>Edit Artist</button>
                         <button onClick={this.deleteArtist}>Delete Artist</button>
                     </info>

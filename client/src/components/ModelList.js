@@ -47,6 +47,10 @@ class ModelList extends Component {
                             dob={spot.dob}
                             ethnicity={spot.ethnicity}
                             location={spot.location}
+                            photo1={spot.photo1}
+                            photo2={spot.photo2}
+                            photo3={spot.photo3}
+                            photo4={spot.photo4}
                             _id={spot._id}
                             getModels={this.getModels}
                         />

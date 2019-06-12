@@ -13,7 +13,11 @@ class ModelForm extends Component {
             name: '',
             dob: '',
             ethnicity: '',
-            location: ''
+            location: '',
+            photo1: '',
+            photo2: '',
+            photo3: '',
+            photo4: ''
         },
         redirect: false,
     }
@@ -57,6 +61,14 @@ class ModelForm extends Component {
                         <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
                         <label htmlFor="location">Location:</label>
                         <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
+                        <label htmlFor="photo1">photo1:</label>
+                        <input id="photo1" name="photo1" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
+                        <label htmlFor="photo2">photo2:</label>
+                        <input id="photo2" name="photo2" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
+                        <label htmlFor="photo3">photo3:</label>
+                        <input id="photo3" name="photo3" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
+                        <label htmlFor="photo4">photo4:</label>
+                        <input id="photo4" name="photo4" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         <button type="submit">Sign Up Model!</button>
                     </form>
                 </body>

@@ -6,7 +6,8 @@ const Artist = new Schema({
     name: String,
     dob: String,
     ethnicity: String,
-    location: String
+    location: String,
+    photo: String
 })
 
 module.exports = mongoose.model('Artist', Artist)

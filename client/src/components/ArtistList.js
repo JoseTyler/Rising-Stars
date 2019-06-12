@@ -19,7 +19,7 @@ class ArtistList extends Component {
     }
 
     getArtists = () => {
-        axios.get('/api/v1/artist').then((res) => {
+        axios.get('/api/v1/artist/').then((res) => {
             this.setState({ artistInfo: res.data })
         })
     }
