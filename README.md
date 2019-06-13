@@ -2,6 +2,10 @@ My application is named "Rising Stars". The application will allow parents or yo
 
 The 1st model is going to be for Modeling, it will contain some input fields for pictures and bio(name, dob, ethnicity, location, etc) about the model.
 
+The 2nd model is going to be for Actors, it will also contain input fields for a picture and bio about the actor.
+
+The 3rd model is going to be for Artist, it will contain input fields for a picture and bio about the artist.
+
 
 My Trello Board link: https://trello.com/b/38uPX9yF/project-4
 
