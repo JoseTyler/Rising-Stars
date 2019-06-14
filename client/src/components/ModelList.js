@@ -4,7 +4,24 @@ import Model from './Model';
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
 
+const Body = styled.div`
+    background-color: orange;
+    height: 100vh;
+    width: 100vw;   
+    top: 0;
+    position: sticky;
+`;
 
+const Header = styled.div`
+    font-size: 30px;
+    position: center;
+    display: flex;
+    justify-content:space-between;
+    width: 50vw;
+    color:solid white;
+    font-family: Gobold High;
+    margin: 0 auto;
+    `;
 
 
 // ModelList Component
@@ -26,10 +43,9 @@ class ModelList extends Component {
 
     render() {
         return (
-            <div>
-                im the model list
+            <Body>
 
-                <header>
+                <Header>
                     <Link to={'/'} style={{ textDecoration: 'none', color: 'red' }}>Home</Link>
                     <Link to={'/model'} style={{ textDecoration: 'none', color: 'red' }}>Model Signup</Link>
                     <Link to={'/models'} style={{ textDecoration: 'none', color: 'red' }}>Models</Link>
@@ -37,7 +53,7 @@ class ModelList extends Component {
                     <Link to={'/actors'} style={{ textDecoration: 'none', color: 'red' }}>Actors</Link>
                     <Link to={'/artist'} style={{ textDecoration: 'none', color: 'red' }}>Artist Signup</Link>
                     <Link to={'/artists'} style={{ textDecoration: 'none', color: 'red' }}>Artists</Link>
-                </header>
+                </Header>
                 {this.state.modelInfo.map((spot, index) => {
                     return (
 
@@ -58,7 +74,7 @@ class ModelList extends Component {
 
                 })}
 
-            </div>
+            </Body>
         );
     }
 }

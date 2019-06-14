@@ -4,7 +4,61 @@ import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
 
 
+const Body = styled.div`
+    background-color: yellow;
+    height: 100vh;
+    width: 100vw;   
+`;
 
+const Header = styled.div`
+    font-size: 30px;
+    position: center;
+    display: flex;
+    justify-content:space-between;
+    width: 50vw;
+    color:solid white;
+    font-family: Gobold High;
+    margin: 0 auto;
+    `;
+
+const Button = styled.button`
+    height:30px;
+    font-size: 20px;
+    background-color: green;
+    text-align: center; 
+    margin: 0 auto;
+    display: block;
+    `;
+
+const P = styled.div`
+    padding:100px; 
+    font-size: 50px;
+    position: center;
+    display: flex;
+    justify-content:space-evenly;
+    color:solid white;
+    font-family: Gobold High;
+    `;
+
+const Form = styled.form`
+    border: solid black;
+    padding:70px;
+    margin-left:150px;
+    margin-right:150px;
+    `;
+
+const Input = styled.div`
+    display:flex;
+    justify-content: center;
+    padding: 30px;
+`;
+
+const Photos = styled.div`
+    display:flex;
+    justify-content: center;
+    padding: 30px;
+
+`;
 
 
 // ArtistForm Component
@@ -37,9 +91,9 @@ class ArtistForm extends Component {
             return <Redirect to="/artists" />
         }
         return (
-            <div>
-                <body>
-                    <header>
+            
+                <Body>
+                    <Header>
                         <Link to={'/'} style={{ textDecoration: 'none', color: 'red' }}>Home</Link>
                         <Link to={'/model'} style={{ textDecoration: 'none', color: 'red' }}>Model Signup</Link>
                         <Link to={'/models'} style={{ textDecoration: 'none', color: 'red' }}>Models</Link>
@@ -47,9 +101,9 @@ class ArtistForm extends Component {
                         <Link to={'/actors'} style={{ textDecoration: 'none', color: 'red' }}>Actors</Link>
                         <Link to={'/artist'} style={{ textDecoration: 'none', color: 'red' }}>Artist Signup</Link>
                         <Link to={'/artists'} style={{ textDecoration: 'none', color: 'red' }}>Artists</Link>
-                    </header>
+                    </Header>
 
-                    <form onSubmit={this.newArtist}>
+                    <Form onSubmit={this.newArtist}>
                         <label htmlFor="name">Name:</label>
                         <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
                         <label htmlFor="dob">DOB:</label>
@@ -60,10 +114,10 @@ class ArtistForm extends Component {
                         <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
                         <label htmlFor="photo">Photo:</label>
                         <input id="photo" name="photo" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
-                        <button type="submit">Sign Up Model!</button>
-                    </form>
-                </body>
-            </div>
+                        <Button type="submit">Sign Up Model!</Button>
+                    </Form>
+                </Body>
+            
         );
     }
 }

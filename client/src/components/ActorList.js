@@ -4,7 +4,22 @@ import Actor from './Actor';
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
 
+const Body = styled.div`
+    background-color: peru;
+    height: 100vh;
+    width: 100vw;   
+`;
 
+const Header = styled.div`
+    font-size: 30px;
+    position: center;
+    display: flex;
+    justify-content:space-between;
+    width: 50vw;
+    color:solid white;
+    font-family: Gobold High;
+    margin: 0 auto;
+    `;
 
 
 // ActorList Component
@@ -26,9 +41,8 @@ class ActorList extends Component {
 
     render() {
         return (
-            <div>
-                Im the actor list
-                    <header>
+            <Body>
+                    <Header>
                         <Link to={'/'} style={{ textDecoration: 'none', color: 'red' }}>Home</Link>
                         <Link to={'/model'} style={{ textDecoration: 'none', color: 'red' }}>Model Signup</Link>
                         <Link to={'/models'} style={{ textDecoration: 'none', color: 'red' }}>Models</Link>
@@ -36,7 +50,7 @@ class ActorList extends Component {
                         <Link to={'/actors'} style={{ textDecoration: 'none', color: 'red' }}>Actors</Link>
                         <Link to={'/artist'} style={{ textDecoration: 'none', color: 'red' }}>Artist Signup</Link>
                         <Link to={'/artists'} style={{ textDecoration: 'none', color: 'red' }}>Artists</Link>
-                    </header>
+                    </Header>
                     {this.state.actorInfo.map((spot, index) => {
                         return (
 
@@ -46,6 +60,7 @@ class ActorList extends Component {
                                 dob={spot.dob}
                                 ethnicity={spot.ethnicity}
                                 location={spot.location}
+                                photo={spot.photo}
                                 _id={spot._id}
                                 getActors={this.getActors}
                             />
@@ -53,7 +68,7 @@ class ActorList extends Component {
 
                     })}
             
-            </div>
+            </Body>
         );
     }
 }

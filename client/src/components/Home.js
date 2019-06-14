@@ -2,14 +2,22 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
+
+const Body = styled.div`
+    background-color: lightblue;
+    height: 100vh;
+    width: 100vw;   
+`;
+
 const Header = styled.div`
     font-size: 30px;
     position: center;
     display: flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
     width: 50vw;
     color:solid white;
     font-family: Gobold High;
+    margin: 0 auto;
     `;
 
 const P = styled.div`
@@ -24,7 +32,7 @@ font-family: Gobold High;
 class Home extends Component {
     render() {
         return (
-            <div>
+            <Body>
                 <Header>
                     <Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
                     <Link to={'/model'} style={{ textDecoration: 'none', color: 'black' }}>Model Signup</Link>
@@ -35,7 +43,7 @@ class Home extends Component {
                     <Link to={'/artists'} style={{ textDecoration: 'none', color: 'black' }}>Artists</Link>
                 </Header>
                 <P>Welcome to Rising Stars etc......</P>
-            </div>
+            </Body>
         );
     }
 }

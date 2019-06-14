@@ -4,7 +4,22 @@ import Artist from './Artist';
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
 
+const Body = styled.div`
+    background-color: orange;
+    height: 100vh;
+    width: 100vw;   
+`;
 
+const Header = styled.div`
+    font-size: 30px;
+    position: center;
+    display: flex;
+    justify-content:space-between;
+    width: 50vw;
+    color:solid white;
+    font-family: Gobold High;
+    margin: 0 auto;
+    `;
 
 
 // ArtistList Component
@@ -26,9 +41,9 @@ class ArtistList extends Component {
 
     render() {
         return (
-            <div>
+            <Body>
                 
-                    <header>
+                    <Header>
                         <Link to={'/'} style={{ textDecoration: 'none', color: 'red' }}>Home</Link>
                         <Link to={'/model'} style={{ textDecoration: 'none', color: 'red' }}>Model Signup</Link>
                         <Link to={'/models'} style={{ textDecoration: 'none', color: 'red' }}>Models</Link>
@@ -36,7 +51,7 @@ class ArtistList extends Component {
                         <Link to={'/actors'} style={{ textDecoration: 'none', color: 'red' }}>Actors</Link>
                         <Link to={'/artist'} style={{ textDecoration: 'none', color: 'red' }}>Artist Signup</Link>
                         <Link to={'/artists'} style={{ textDecoration: 'none', color: 'red' }}>Artists</Link>
-                    </header>
+                    </Header>
                     {this.state.artistInfo.map((spot, index) => {
                         return (
 
@@ -47,13 +62,14 @@ class ArtistList extends Component {
                                 ethnicity={spot.ethnicity}
                                 location={spot.location}
                                 _id={spot._id}
+                                photo={spot.photo}
                                 getArtists={this.getArtists}
                             />
                         )
 
                     })}
                 
-            </div>
+            </Body>
         );
     }
 }

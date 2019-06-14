@@ -6,9 +6,7 @@ import styled from 'styled-components';
 const Body = styled.div`
     background-color: red;
     height: 100vh;
-    width: 100vw;
-
-    
+    width: 100vw;   
 `;
 
 const Header = styled.div`
@@ -41,8 +39,11 @@ const P = styled.div`
     font-family: Gobold High;
     `;
 
-const Form = styled.div`
-    color: black;
+const Form = styled.form`
+    border: solid black;
+    padding:70px;
+    margin-left:150px;
+    margin-right:150px;
     `;
 
 const Input = styled.div`

@@ -3,6 +3,62 @@ import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
 
+const Body = styled.div`
+    background-color: green;
+    height: 100vh;
+    width: 100vw;   
+`;
+
+const Header = styled.div`
+    font-size: 30px;
+    position: center;
+    display: flex;
+    justify-content:space-between;
+    width: 50vw;
+    color:solid white;
+    font-family: Gobold High;
+    margin: 0 auto;
+    `;
+
+const Button = styled.button`
+    height:30px;
+    font-size: 20px;
+    background-color: white;
+    text-align: center; 
+    margin: 0 auto;
+    display: block;
+    `;
+
+const P = styled.div`
+    padding:100px; 
+    font-size: 50px;
+    position: center;
+    display: flex;
+    justify-content:space-evenly;
+    color:solid white;
+    font-family: Gobold High;
+    `;
+
+const Form = styled.form`
+    border: solid black;
+    padding:70px;
+    margin-left:150px;
+    margin-right:150px;
+    `;
+
+const Input = styled.div`
+    display:flex;
+    justify-content: center;
+    padding: 30px;
+`;
+
+const Photos = styled.div`
+    display:flex;
+    justify-content: center;
+    padding: 30px;
+
+`;
+
 
 
 
@@ -36,19 +92,19 @@ class ActorForm extends Component {
             return <Redirect to="/actors" />
         }
         return (
-            <div>
-                <body>
-                    <header>
-                        <Link to={'/'} style={{ textDecoration: 'none', color: 'red' }}>Home</Link>
-                        <Link to={'/model'} style={{ textDecoration: 'none', color: 'red' }}>Model Signup</Link>
-                        <Link to={'/models'} style={{ textDecoration: 'none', color: 'red' }}>Models</Link>
-                        <Link to={'/actor'} style={{ textDecoration: 'none', color: 'red' }}>Actor Signup</Link>
-                        <Link to={'/actors'} style={{ textDecoration: 'none', color: 'red' }}>Actors</Link>
-                        <Link to={'/artist'} style={{ textDecoration: 'none', color: 'red' }}>Artist Signup</Link>
-                        <Link to={'/artists'} style={{ textDecoration: 'none', color: 'red' }}>Artists</Link>
-                    </header>
+            
+                <Body>
+                    <Header>
+                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+                        <Link to={'/model'} style={{ textDecoration: 'none', color: 'white' }}>Model Signup</Link>
+                        <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' }}>Models</Link>
+                        <Link to={'/actor'} style={{ textDecoration: 'none', color: 'white' }}>Actor Signup</Link>
+                        <Link to={'/actors'} style={{ textDecoration: 'none', color: 'white' }}>Actors</Link>
+                        <Link to={'/artist'} style={{ textDecoration: 'none', color: 'white' }}>Artist Signup</Link>
+                        <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white' }}>Artists</Link>
+                    </Header>
 
-                    <form onSubmit={this.newActor}>
+                    <Form onSubmit={this.newActor}>
                         <label htmlFor="name">Name:</label>
                         <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
                         <label htmlFor="dob">DOB:</label>
@@ -59,10 +115,10 @@ class ActorForm extends Component {
                         <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
                         <label htmlFor="photo">Photo:</label>
                         <input id="photo" name="photo" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
-                        <button type="submit">Sign Up Actor!</button>
-                    </form>
-                </body>
-            </div>
+                        <Button type="submit">Sign Up Actor!</Button>
+                    </Form>
+                </Body>
+            
         );
     }
 }
