@@ -13,16 +13,35 @@ const Header = styled.div`
     font-family: Gobold High;
     `;
 
-
 const Button = styled.button`
-    height:20px;
-    font-size: 15px;
+    height:30px;
+    font-size: 20px;
     background-color: blue;
-    position: relative;
+    text-align: center; 
+    margin: 0 auto;
+    display: block;
+    `;
+
+const P = styled.div`
+    padding:40px; 
+    font-size: 50px;
+    position: center;
+    display: flex;
+    justify-content:space-evenly;
+    color:solid white;
+    font-family: Gobold High;
     `;
 
 const Input = styled.div`
     display:flex;
+    justify-content: center;
+    padding: 30px;
+`;
+
+const Photos = styled.div`
+    display:flex;
+    justify-content: center;
+    padding: 30px;
 
 `;
 
@@ -72,18 +91,11 @@ class ModelForm extends Component {
                         <Link to={'/artist'} style={{ textDecoration: 'none', color: 'black' }}>Artist Signup</Link>
                         <Link to={'/artists'} style={{ textDecoration: 'none', color: 'black' }}>Artists</Link>
                     </Header>
+                    <P>
+                        Fill out the form below etc..
+                    </P>
 
                     <form onSubmit={this.newModel}>
-                        <Input>
-                            <label htmlFor="name">Name:</label>
-                            <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
-                            <label htmlFor="dob">DOB:</label>
-                            <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
-                            <label htmlFor="ethnicity">Ethnicity:</label>
-                            <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
-                            <label htmlFor="location">Location:</label>
-                            <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
-                        </Input>
                         <Photos>
                             <label htmlFor="photo1">Photo 1:</label>
                             <input id="photo1" name="photo1" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
@@ -94,6 +106,16 @@ class ModelForm extends Component {
                             <label htmlFor="photo4">Photo 4:</label>
                             <input id="photo4" name="photo4" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         </Photos>
+                        <Input>
+                            <label htmlFor="name">Name:</label>
+                            <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
+                            <label htmlFor="dob">DOB:</label>
+                            <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
+                            <label htmlFor="ethnicity">Ethnicity:</label>
+                            <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
+                            <label htmlFor="location">Location:</label>
+                            <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
+                        </Input>
                         <Button type="submit">Sign Up Model!</Button>
                     </form>
                 </body>
