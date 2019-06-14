@@ -3,33 +3,46 @@ import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
 
+const Body = styled.div`
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+
+    
+`;
+
 const Header = styled.div`
     font-size: 30px;
     position: center;
     display: flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
     width: 50vw;
     color:solid white;
     font-family: Gobold High;
+    margin: 0 auto;
     `;
 
 const Button = styled.button`
     height:30px;
     font-size: 20px;
-    background-color: blue;
+    background-color: green;
     text-align: center; 
     margin: 0 auto;
     display: block;
     `;
 
 const P = styled.div`
-    padding:40px; 
+    padding:100px; 
     font-size: 50px;
     position: center;
     display: flex;
     justify-content:space-evenly;
     color:solid white;
     font-family: Gobold High;
+    `;
+
+const Form = styled.div`
+    color: black;
     `;
 
 const Input = styled.div`
@@ -80,8 +93,7 @@ class ModelForm extends Component {
             return <Redirect to="/models" />
         }
         return (
-            <div>
-                <body>
+                <Body>
                     <Header>
                         <Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
                         <Link to={'/model'} style={{ textDecoration: 'none', color: 'black' }}>Model Signup</Link>
@@ -95,31 +107,36 @@ class ModelForm extends Component {
                         Fill out the form below etc..
                     </P>
 
-                    <form onSubmit={this.newModel}>
+                    <Form onSubmit={this.newModel}>
                         <Photos>
                             <label htmlFor="photo1">Photo 1:</label>
                             <input id="photo1" name="photo1" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
+                            &nbsp; &nbsp; &nbsp;
                             <label htmlFor="photo2">Photo 2:</label>
                             <input id="photo2" name="photo2" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
+                            &nbsp; &nbsp; &nbsp;
                             <label htmlFor="photo3">Photo 3:</label>
                             <input id="photo3" name="photo3" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
+                            &nbsp; &nbsp; &nbsp;
                             <label htmlFor="photo4">Photo 4:</label>
                             <input id="photo4" name="photo4" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         </Photos>
                         <Input>
                             <label htmlFor="name">Name:</label>
                             <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
+                            &nbsp; &nbsp; &nbsp;
                             <label htmlFor="dob">DOB:</label>
                             <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
+                            &nbsp; &nbsp; &nbsp;
                             <label htmlFor="ethnicity">Ethnicity:</label>
                             <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
+                            &nbsp; &nbsp; &nbsp;
                             <label htmlFor="location">Location:</label>
                             <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
                         </Input>
                         <Button type="submit">Sign Up Model!</Button>
-                    </form>
-                </body>
-            </div>
+                    </Form>
+                </Body>
         );
     }
 }
