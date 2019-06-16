@@ -39,10 +39,6 @@ const P = styled.div`
     padding-bottom:30px;
     padding-left:850px; 
     font-size: 50px;
-
-    
-    /* display: flex;
-    justify-content:space-evenly; */
     color:solid white;
     font-family: Gobold High;
     `;
@@ -54,18 +50,6 @@ const Form = styled.form`
     margin-right:150px;
     height: 21vh;
     `;
-
-// const Input = styled.div`
-//     display:flex;
-//     justify-content: center;
-//     padding: 30px;
-// `;
-
-// const Photos = styled.div`
-//     display:flex;
-//     justify-content: center;
-//     padding: 30px;
-//     `;
 
 const Row1 = styled.div`
     display:flex;
