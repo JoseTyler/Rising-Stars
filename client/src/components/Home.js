@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 const Body = styled.div`
     background-color: lightblue;
+    padding-top: 20px;
     height: 100vh;
     width: 100vw;   
 `;

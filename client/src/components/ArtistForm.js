@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const Body = styled.div`
     background-color: yellow;
+    padding-top: 20px;
     height: 100vh;
     width: 100vw;   
 `;
@@ -47,18 +48,7 @@ const Form = styled.form`
     margin-right:150px;
     `;
 
-const Input = styled.div`
-    display:flex;
-    justify-content: center;
-    padding: 30px;
-`;
 
-const Photos = styled.div`
-    display:flex;
-    justify-content: center;
-    padding: 30px;
-
-`;
 
 
 // ArtistForm Component

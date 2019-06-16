@@ -3,7 +3,7 @@ let router = express.Router()
 const modelController = require('../controllers/modelController')
 const actorController = require('../controllers/actorController')
 const artistController = require('../controllers/artistController')
-
+const spotifyController = require('../controllers/spotifyController')
 // INDEX MODEL
 router.get('/model/', modelController.index)
 
@@ -53,4 +53,11 @@ router.get('/artist/:id', artistController.show)
 // PUT ARTIST
 router.put('/artist/:id', artistController.update)
 
+// =================================================
+
+router.get("spotify/",spotifyController.index)
+
+
+
 module.exports = router
+

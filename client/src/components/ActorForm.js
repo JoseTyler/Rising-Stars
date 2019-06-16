@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
+import img from '../images/actorform.png'
 
 const Body = styled.div`
-    background-color: green;
+    background-image: url(${img});
+    background-size: cover;
+    padding-top: 20px;
     height: 100vh;
     width: 100vw;   
 `;

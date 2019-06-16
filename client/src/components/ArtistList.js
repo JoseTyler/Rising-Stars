@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 
 const Body = styled.div`
     background-color: orange;
+    padding-top: 20px;
     height: 100vh;
     width: 100vw;   
 `;

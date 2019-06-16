@@ -5,9 +5,10 @@ import styled from 'styled-components'
 import { Link } from "react-router-dom"
 
 const Body = styled.div`
-    background-color: orange;
+    background-color: skyblue;
     height: 100vh;
-    width: 100vw;   
+    width: 100vw;  
+    padding-top: 20px; 
     top: 0;
     position: sticky;
 `;
