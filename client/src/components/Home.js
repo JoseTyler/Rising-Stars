@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import styled from "styled-components"
+import Counter from "./Counter"
 
 
 const Body = styled.div`
@@ -44,6 +45,9 @@ class Home extends Component {
                     <Link to={'/artists'} style={{ textDecoration: 'none', color: 'black' }}>Artists</Link>
                 </Header>
                 <P>Welcome to Rising Stars etc......</P>
+
+
+                <Counter/>
             </Body>
         );
     }

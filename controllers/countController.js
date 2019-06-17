@@ -8,12 +8,7 @@ const countController = {
         console.log("Hello")
         axios.get('https://api.countapi.xyz/hit/countapi.xyz/visits?').then((response) => {
             console.log(response.data)
-            // function cb(resObj) {
-            //     return resObj.value;
-            // }
-
-            // let infoSentBack = cb()
-            // console.log(infoSentBack)
+           
             res.send(response.data)
         })
         // Model.find().then(Count => {
