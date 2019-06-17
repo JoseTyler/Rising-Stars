@@ -10,3 +10,9 @@ The 3rd model is going to be for Artist, it will contain input fields for a pict
 My Trello Board link: https://trello.com/b/38uPX9yF/project-4
 
 My Git Repo link: https://github.com/JoseTyler101/Project-4
+
+
+
+
+Referenced instructions from Spotify to make 3rd Party API call from this link
+https://developer.spotify.com/documentation/web-api/quick-start/
