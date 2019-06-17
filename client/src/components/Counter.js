@@ -9,7 +9,7 @@ class Counter extends Component {
     }
 
     componentDidMount = () => {
-this.counter()
+        this.counter()
 
     }
 
@@ -20,7 +20,7 @@ this.counter()
 
     }
 
-    
+
     render() {
         return (
             <div>
