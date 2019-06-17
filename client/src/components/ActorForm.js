@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
-import img from '../images/actorform.png'
+import img from '../images/actorform.jpg'
 
 const Body = styled.div`
     background-image: url(${img});
@@ -46,7 +46,7 @@ const Form = styled.form`
     border: solid black;
     padding:70px;
     margin-left:150px;
-    margin-right:150px;
+    margin-right:750px;
     `;
 
 const Input = styled.div`

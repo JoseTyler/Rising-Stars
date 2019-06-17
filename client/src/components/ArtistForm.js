@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
+import img from '../images/artistform.jpg'
 
 
 const Body = styled.div`
+    background-image: url(${img});
     background-color: yellow;
+    background-size: cover;
     padding-top: 20px;
     height: 100vh;
-    width: 100vw;   
+    width: 100vw;
 `;
 
 const Header = styled.div`
@@ -47,8 +50,6 @@ const Form = styled.form`
     margin-left:150px;
     margin-right:150px;
     `;
-
-
 
 
 // ArtistForm Component
