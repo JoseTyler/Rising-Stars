@@ -74,9 +74,9 @@ class Actor extends Component {
                         <p>Ethnicity: {this.props.ethnicity}</p>
                         <p>Location: {this.props.location}</p>
                         <p>Photo1:</p>
-                        <img src={this.props.photo1}/>
+                        <img width="453" height="280" src={this.props.photo1}/>
                         <p>Photo2:</p>
-                        <img src={this.props.photo2}/>
+                        <img width="453" height="280" src={this.props.photo2}/>
                         <p>Video:</p>
                         <iframe width="453" height="236" src={this.state.formInfo.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <button onClick={this.swapForm}>Edit Actor</button>
