@@ -4,6 +4,8 @@ import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
 import img from '../images/modelform.jpg'
 
+
+// ModelForm Component Styling
 const Body = styled.div`
     background-image: url(${img});
     background-color: red;
@@ -48,7 +50,6 @@ const P = styled.div`
 
 const Form = styled.form`
     border: solid white;
-    /* padding:70px; */
     margin-left: 750px;
     margin-right: 150px;
     height: 21vh;

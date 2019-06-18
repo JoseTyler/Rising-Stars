@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { Link } from "react-router-dom"
 import img from '../images/soft.jpg'
 
+
+// ModelList Component Styling
 const Body = styled.div`
     background-image: url(${img});
     background-size: cover;
@@ -36,7 +38,6 @@ const Mode = styled.div`
 
 
 // ModelList Component
-
 class ModelList extends Component {
     state = {
         modelInfo: []

@@ -10,26 +10,21 @@ class Counter extends Component {
 
     componentDidMount = () => {
         this.counter()
-
     }
 
     counter = () => {
         axios.get('api/v1/count/').then((res) => {
             this.setState({ count: res.data })
         })
-
     }
-
 
     render() {
         return (
             <div>
                 This site has been visited
-
                 <p>
-                    {this.state.count.value} times.
+                    {this.state.count.value} times!
                 </p>
-
             </div>
         );
     }

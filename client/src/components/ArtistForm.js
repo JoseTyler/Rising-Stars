@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import img from '../images/singer.jpg'
 
 
+// ArtistForm Component Styling
 const Body = styled.div`
     background-image: url(${img});
     background-color: yellow;
@@ -53,23 +54,22 @@ const Form = styled.form`
     `;
 
 const Row1 = styled.div`
-display:flex;
-justify-content: center;
-padding-top: 20px;  
-`;
+    display:flex;
+    justify-content: center;
+    padding-top: 20px;  
+    `;
 
 const Row2 = styled.div`
-display:flex;
-justify-content: center;
-padding-top: 20px;
-`;
+    display:flex;
+    justify-content: center;
+    padding-top: 20px;
+    `;
 
 const Row3 = styled.div`
-display:flex;
-justify-content: center;
-padding-top: 20px;
-
-`;
+    display:flex;
+    justify-content: center;
+    padding-top: 20px;
+    `;
 
 
 // ArtistForm Component
@@ -78,7 +78,7 @@ class ArtistForm extends Component {
         formInfo: {
             name: '',
             dob: '',
-            ethnicity: '',
+            genre: '',
             location: '',
             photo: '',
             link:''
@@ -117,7 +117,6 @@ class ArtistForm extends Component {
                     <P>
                     Fill out the form below to sign up!
                     </P>
-
                     <Form onSubmit={this.newArtist}>
                         <Row1>
                         <label htmlFor="name">Name:</label>
@@ -126,8 +125,8 @@ class ArtistForm extends Component {
                         <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
                         </Row1>
                         <Row2>
-                        <label htmlFor="ethnicity">Ethnicity:</label>
-                        <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
+                        <label htmlFor="genre">Genre:</label>
+                        <input id="genre" name="genre" type="text" placeholder="Ex: Hip Hop" onChange={this.handleChange} />
                         <label htmlFor="location">Location:</label>
                         <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
                         </Row2>

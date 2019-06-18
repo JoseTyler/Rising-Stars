@@ -3,15 +3,14 @@ import axios from 'axios';
 import styled from 'styled-components'
 
 
-
-
+// Artist Component
 class Artist extends Component {
     state = {
         showForm: false,
         formInfo: {
             name: '',
             dob: '',
-            ethnicity: '',
+            genre: '',
             location: '',
             photo: '',
             link: '',
@@ -22,7 +21,7 @@ class Artist extends Component {
         let copyOfFormInfo = this.state.formInfo
         copyOfFormInfo.name = this.props.name
         copyOfFormInfo.dob = this.props.dob
-        copyOfFormInfo.ethnicity = this.props.ethnicity
+        copyOfFormInfo.genre = this.props.genre
         copyOfFormInfo.location = this.props.location
         copyOfFormInfo.photo = this.props.photo
         copyOfFormInfo.link = this.props.link
@@ -65,8 +64,8 @@ class Artist extends Component {
                         <input id="name" name="name" type="text" placeholder={this.props.name} onChange={this.handleChange} />
                         <label htmlFor="dob">DOB:</label>
                         <input id="dob" name="dob" type="text" placeholder={this.props.dob} onChange={this.handleChange} />
-                        <label htmlFor="ethnicity">Ethnicity:</label>
-                        <input id="ethnicity" name="ethnicity" type="text" placeholder={this.props.ethnicity} onChange={this.handleChange} />
+                        <label htmlFor="genre">Genre:</label>
+                        <input id="genre" name="genre" type="text" placeholder={this.props.ethnicity} onChange={this.handleChange} />
                         <label htmlFor="location">Location:</label>
                         <input id="location" name="location" type="text" placeholder={this.props.location} onChange={this.handleChange} />
                         <button onClick={this.setState.swapForm} >Submit Edit!</button>
@@ -74,12 +73,12 @@ class Artist extends Component {
                     : <info>
                         <p>Name: {this.props.name}</p>
                         <p>DOB: {this.props.dob}</p>
-                        <p>Ethnicity: {this.props.ethnicity}</p>
+                        <p>Genre: {this.props.genre}</p>
                         <p>Location: {this.props.location}</p>
                         <p>Photo:</p>
-                        <img src={this.props.photo}/>
+                        <img src={this.props.photo} />
                         <p>Music:</p>
-                        <a href={this.props.link}/>
+                        <a href={this.props.link} />
                         <button onClick={this.swapForm}>Edit Artist</button>
                         <button onClick={this.deleteArtist}>Delete Artist</button>
                     </info>

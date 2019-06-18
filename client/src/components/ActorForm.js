@@ -4,6 +4,8 @@ import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
 import img from '../images/actorform.jpg'
 
+
+// ActorForm Component Styling
 const Body = styled.div`
     background-image: url(${img});
     background-size: cover;

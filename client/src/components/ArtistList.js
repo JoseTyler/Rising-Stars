@@ -4,12 +4,14 @@ import Artist from './Artist';
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
 
+
+// ArtistList Component Styling
 const Body = styled.div`
     background-color: orange;
     padding-top: 20px;
     height: 100vh;
     width: 100vw;   
-`;
+    `;
 
 const Header = styled.div`
     font-size: 30px;
@@ -22,9 +24,14 @@ const Header = styled.div`
     margin: 0 auto;
     `;
 
+const Art = styled.div`
+    text-align: center;
+    padding-top: 40px;
+    `;
+
+
 
 // ArtistList Component
-
 class ArtistList extends Component {
     state = {
         artistInfo: []
@@ -55,17 +62,18 @@ class ArtistList extends Component {
                     </Header>
                     {this.state.artistInfo.map((spot, index) => {
                         return (
-
+                            <Art>
                             <Artist
                                 key={index}
                                 name={spot.name}
                                 dob={spot.dob}
-                                ethnicity={spot.ethnicity}
+                                genre={spot.genre}
                                 location={spot.location}
                                 _id={spot._id}
                                 photo={spot.photo}
                                 getArtists={this.getArtists}
                             />
+                            </Art>
                         )
 
                     })}
