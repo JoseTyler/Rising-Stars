@@ -23,13 +23,14 @@ const Header = styled.div`
     `;
 
 const P = styled.div`
-font-size: 30px;
-position: center;
-display: flex;
-justify-content:space-evenly;
-color:solid white;
-font-family: Gobold High;
-`;
+    padding: 50px;
+    font-size: 30px;
+    position: center;
+    display: flex;
+    justify-content:space-evenly;
+    color:solid white;
+    font-family: Gobold High;
+    `;
 
 class Home extends Component {
     render() {
@@ -47,7 +48,7 @@ class Home extends Component {
                 <P>Welcome to Rising Stars etc......</P>
 
 
-                <Counter/>
+                <Counter />
             </Body>
         );
     }

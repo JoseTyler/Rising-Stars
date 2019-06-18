@@ -60,7 +60,8 @@ class ArtistForm extends Component {
             dob: '',
             ethnicity: '',
             location: '',
-            photo: ''
+            photo: '',
+            mp3:''
         },
         redirect: false,
     }

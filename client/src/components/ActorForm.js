@@ -166,7 +166,7 @@ class ActorForm extends Component {
                     </Row3>
                     <Row4>
                         <Label htmlFor="url">Video URL:&nbsp; </Label>
-                        <Input id="url" name ="url" type="text" placeholder="Ex. Youtube.com/sample" onchange={this.handlechange}/>
+                        <Input id="url" name ="url" type="text" placeholder="Ex. Youtube.com/sample" onChange={this.handleChange}/>
                         
                     </Row4>
                         <Button type="submit">Sign Up Actor!</Button>
