@@ -6,16 +6,13 @@ const Row1 = styled.div`
 display: flex;
 justify-content:space-evenly;
 `;
+
 const Row2 = styled.div`
-display: flex;
-justify-content:space-evenly;
-`;
-const Row3 = styled.div`
 display: flex;
 justify-content:space-evenly;
 padding-bottom:30px;
 `;
-const Row4 = styled.div`
+const Row3 = styled.div`
 display: flex;
 justify-content:space-evenly;
 padding-bottom: 30px;
@@ -26,9 +23,9 @@ const Button = styled.button`
     height:30px;
     font-size: 20px;
     background-color: turquoise;
-    text-align: center; 
+    /* text-align: center; 
     margin: 0 auto;
-    display: block;
+    display: block; */
     `;
 
 
@@ -98,23 +95,23 @@ class Model extends Component {
                         <Row1>
                         <p>Name: {this.props.name}</p>
                         <p>DOB: {this.props.dob}</p>
-                        </Row1>
-                        <Row2>
+                        
                         <p>Ethnicity: {this.props.ethnicity}</p>
                         <p>Location: {this.props.location}</p>
-                        </Row2>
-                        <Row3>
+                        
+                        </Row1>
+                        <Row2>
                         <p>Photo1:</p>
                         <img width="453" height="280" src={this.props.photo1}/>
                         <p>Photo2:</p>
                         <img width="453" height="280" src={this.props.photo2}/>
-                        </Row3>
-                        <Row4>
+                        </Row2>
+                        <Row3>
                         <p>Photo3:</p>
                         <img width="453" height="280" src={this.props.photo3}/>
                         <p>Photo4:</p>
                         <img width="453" height="280" src={this.props.photo4}/>
-                        </Row4>
+                        </Row3>
                         <Button onClick={this.swapForm}>Edit Model</Button>
                         <Button onClick={this.deleteModel}>Delete Model</Button>
                     </div>

@@ -13,6 +13,8 @@ class Artist extends Component {
             dob: '',
             ethnicity: '',
             location: '',
+            photo: '',
+            link: '',
             _id: ''
         }
     }
@@ -22,6 +24,8 @@ class Artist extends Component {
         copyOfFormInfo.dob = this.props.dob
         copyOfFormInfo.ethnicity = this.props.ethnicity
         copyOfFormInfo.location = this.props.location
+        copyOfFormInfo.photo = this.props.photo
+        copyOfFormInfo.link = this.props.link
         copyOfFormInfo._id = this.props._id
         this.setState({
             formInfo: copyOfFormInfo
@@ -74,7 +78,8 @@ class Artist extends Component {
                         <p>Location: {this.props.location}</p>
                         <p>Photo:</p>
                         <img src={this.props.photo}/>
-                        <p>Song</p>
+                        <p>Music:</p>
+                        <a href={this.props.link}/>
                         <button onClick={this.swapForm}>Edit Artist</button>
                         <button onClick={this.deleteArtist}>Delete Artist</button>
                     </info>

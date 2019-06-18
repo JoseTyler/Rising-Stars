@@ -48,7 +48,6 @@ const P = styled.div`
 const Form = styled.form`
     border: solid white;
     height: 22vh;
-    /* padding: 30px; */
     margin-left:150px;
     margin-right:750px;
     `;

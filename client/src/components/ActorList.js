@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Link } from "react-router-dom"
 
 const Body = styled.div`
-    background-color: peru;
+    background-color: tan;
     padding-top: 20px;
     height: 100vh;
     width: 100vw;   

@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components'
 
+const Row1 = styled.div`
+display: flex;
+justify-content:space-evenly;
+`;
+
+const Row2 = styled.div`
+display: flex;
+justify-content:space-evenly;
+padding-bottom:30px;
+`;
+
 
 
 class Actor extends Component {
@@ -69,14 +80,18 @@ class Actor extends Component {
                         <button onClick={this.setState.swapForm} >Submit Edit!</button>
                     </form>
                     : <info>
+                        <Row1>
                         <p>Name: {this.props.name}</p>
                         <p>DOB: {this.props.dob}</p>
                         <p>Ethnicity: {this.props.ethnicity}</p>
                         <p>Location: {this.props.location}</p>
+                        </Row1>
+                        <Row2>
                         <p>Photo1:</p>
                         <img width="453" height="280" src={this.props.photo1}/>
                         <p>Photo2:</p>
                         <img width="453" height="280" src={this.props.photo2}/>
+                        </Row2>
                         <p>Video:</p>
                         <iframe width="453" height="236" src={this.state.formInfo.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <button onClick={this.swapForm}>Edit Actor</button>
