@@ -23,7 +23,7 @@ const Button = styled.button`
     border: solid white;
     height:30px;
     font-size: 20px;
-    background-color: turquoise;
+    background-color: red;
     `;
 
 
@@ -99,15 +99,15 @@ class Model extends Component {
                         </Row1>
                         <Row2>
                             <p>Photo1:</p>
-                            <img width="453" height="280" src={this.props.photo1} />
+                            <img width="420" height="595" src={this.props.photo1} />
                             <p>Photo2:</p>
-                            <img width="453" height="280" src={this.props.photo2} />
+                            <img width="420" height="595" src={this.props.photo2} />
                         </Row2>
                         <Row3>
                             <p>Photo3:</p>
                             <img width="453" height="280" src={this.props.photo3} />
                             <p>Photo4:</p>
-                            <img width="453" height="280" src={this.props.photo4} />
+                            <img width="420" height="595" src={this.props.photo4} />
                         </Row3>
                         <Button onClick={this.swapForm}>Edit Model</Button>
                         <Button onClick={this.deleteModel}>Delete Model</Button>

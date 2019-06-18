@@ -13,6 +13,13 @@ justify-content:space-evenly;
 padding-bottom:30px;
 `;
 
+const Button = styled.button`
+    border: solid white;
+    height:30px;
+    font-size: 20px;
+    background-color: turquoise;
+    `;
+
 
 
 class Actor extends Component {
@@ -94,8 +101,8 @@ class Actor extends Component {
                         </Row2>
                         <p>Video:</p>
                         <iframe width="453" height="236" src={this.state.formInfo.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <button onClick={this.swapForm}>Edit Actor</button>
-                        <button onClick={this.deleteActor}>Delete Actor</button>
+                        <Button onClick={this.swapForm}>Edit Actor</Button>
+                        <Button onClick={this.deleteActor}>Delete Actor</Button>
                     </info>
                 }
             </div>

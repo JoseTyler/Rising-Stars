@@ -27,6 +27,7 @@ const Header = styled.div`
     `;
 
 const Button = styled.button`
+    border: solid black;
     height:30px;
     font-size: 20px;
     background-color: red;
@@ -48,9 +49,9 @@ const P = styled.div`
 
 const Form = styled.form`
     border: solid black;
-    padding:20px;
-    margin-left:150px;
-    margin-right:850px;
+    margin-left:125px;
+    margin-right:825px;
+    height: 18vh;
     `;
 
 const Row1 = styled.div`
@@ -69,6 +70,7 @@ const Row3 = styled.div`
     display:flex;
     justify-content: center;
     padding-top: 20px;
+    padding-bottom: 30px;
     `;
 
 
@@ -119,22 +121,28 @@ class ArtistForm extends Component {
                     </P>
                     <Form onSubmit={this.newArtist}>
                         <Row1>
-                        <label htmlFor="name">Name:</label>
+                        <label htmlFor="name">Name:&nbsp;</label>
                         <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
-                        <label htmlFor="dob">DOB:</label>
+                        &nbsp; &nbsp; &nbsp;
+                        <label htmlFor="dob">DOB:&nbsp;</label>
                         <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
+                        &nbsp; &nbsp; &nbsp;
                         </Row1>
                         <Row2>
-                        <label htmlFor="genre">Genre:</label>
+                        <label htmlFor="genre">Genre:&nbsp;</label>
                         <input id="genre" name="genre" type="text" placeholder="Ex: Hip Hop" onChange={this.handleChange} />
-                        <label htmlFor="location">Location:</label>
+                        &nbsp; &nbsp; &nbsp;
+                        <label htmlFor="location">Location:&nbsp;</label>
                         <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
+                        &nbsp; &nbsp; &nbsp;
                         </Row2>
                         <Row3>
-                        <label htmlFor="photo">Photo:</label>
+                        <label htmlFor="photo">Photo:&nbsp;</label>
                         <input id="photo" name="photo" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
-                        <label htmlFor="link">Music:</label>
+                        &nbsp; &nbsp; &nbsp;
+                        <label htmlFor="link">Music:&nbsp;</label>
                         <input id="link" name="link" type="text" placeholder="Ex: MusicUrl" onChange={this.handleChange} />
+                        &nbsp; &nbsp; &nbsp;
                         </Row3>
                         <Button type="submit">Sign Up Artist!</Button>
                     </Form>

@@ -3,6 +3,13 @@ import axios from 'axios';
 import styled from 'styled-components'
 
 
+const Button = styled.button`
+    border: solid black;
+    height:30px;
+    font-size: 20px;
+    background-color: red;
+    `;
+
 // Artist Component
 class Artist extends Component {
     state = {
@@ -76,11 +83,11 @@ class Artist extends Component {
                         <p>Genre: {this.props.genre}</p>
                         <p>Location: {this.props.location}</p>
                         <p>Photo:</p>
-                        <img src={this.props.photo} />
+                        <img width="453" height="280" src={this.props.photo} />
                         <p>Music:</p>
                         <a href={this.props.link} />
-                        <button onClick={this.swapForm}>Edit Artist</button>
-                        <button onClick={this.deleteArtist}>Delete Artist</button>
+                        <Button onClick={this.swapForm}>Edit Artist</Button>
+                        <Button onClick={this.deleteArtist}>Delete Artist</Button>
                     </info>
                 }
             </div>

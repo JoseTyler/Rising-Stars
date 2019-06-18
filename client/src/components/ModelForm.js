@@ -135,7 +135,7 @@ class ModelForm extends Component {
                         <label htmlFor="photo1">Photo 1:&nbsp;</label>
                         <input id="photo1" name="photo1" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
-                            <label htmlFor="photo2">Photo 2:&nbsp;</label>
+                        <label htmlFor="photo2">Photo 2:&nbsp;</label>
                         <input id="photo2" name="photo2" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
                     </Row1>
@@ -143,7 +143,7 @@ class ModelForm extends Component {
                         <label htmlFor="photo3">Photo 3:&nbsp;</label>
                         <input id="photo3" name="photo3" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
-                            <label htmlFor="photo4">Photo 4:&nbsp;</label>
+                        <label htmlFor="photo4">Photo 4:&nbsp;</label>
                         <input id="photo4" name="photo4" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
                     </Row2>
@@ -152,7 +152,7 @@ class ModelForm extends Component {
                         <label htmlFor="name">Name: &nbsp;</label>
                         <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
-                            <label htmlFor="dob">DOB:&nbsp;</label>
+                        <label htmlFor="dob">DOB:&nbsp;</label>
                         <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
                     </Row3>
@@ -160,7 +160,7 @@ class ModelForm extends Component {
                         <label htmlFor="ethnicity">Ethnicity:&nbsp;</label>
                         <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
-                            <label htmlFor="location">Location:&nbsp;</label>
+                        <label htmlFor="location">Location:&nbsp;</label>
                         <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
                     </Row4>

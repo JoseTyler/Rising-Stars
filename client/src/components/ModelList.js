@@ -8,10 +8,10 @@ import img from '../images/soft.jpg'
 
 // ModelList Component Styling
 const Body = styled.div`
-    background-image: url(${img});
+    /* background-image: url(${img}); */
     background-size: cover;
-    background-color: skyblue;
-    height: 100vh;
+    background-color: grey;
+    height: 160vh;
     width: 100vw;  
     padding-top: 20px; 
     top: 0;
@@ -31,6 +31,7 @@ const Header = styled.div`
 
 const Mode = styled.div`
     text-align: center;
+    color: white;
     padding-top: 40px;
 
 
@@ -58,13 +59,13 @@ class ModelList extends Component {
             <Body>
 
                 <Header>
-                    <Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
-                    <Link to={'/model'} style={{ textDecoration: 'none', color: 'black' }}>Model Signup</Link>
-                    <Link to={'/models'} style={{ textDecoration: 'none', color: 'black' }}>Models</Link>
-                    <Link to={'/actor'} style={{ textDecoration: 'none', color: 'black' }}>Actor Signup</Link>
-                    <Link to={'/actors'} style={{ textDecoration: 'none', color: 'black' }}>Actors</Link>
-                    <Link to={'/artist'} style={{ textDecoration: 'none', color: 'black' }}>Artist Signup</Link>
-                    <Link to={'/artists'} style={{ textDecoration: 'none', color: 'black' }}>Artists</Link>
+                    <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+                    <Link to={'/model'} style={{ textDecoration: 'none', color: 'white' }}>Model Signup</Link>
+                    <Link to={'/models'} style={{ textDecoration: 'none', color: 'white' }}>Models</Link>
+                    <Link to={'/actor'} style={{ textDecoration: 'none', color: 'white' }}>Actor Signup</Link>
+                    <Link to={'/actors'} style={{ textDecoration: 'none', color: 'white' }}>Actors</Link>
+                    <Link to={'/artist'} style={{ textDecoration: 'none', color: 'white' }}>Artist Signup</Link>
+                    <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white' }}>Artists</Link>
                 </Header>
                 {this.state.modelInfo.map((spot, index) => {
                     return (
