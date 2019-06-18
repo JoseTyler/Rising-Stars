@@ -35,9 +35,12 @@ const Button = styled.button`
     `;
 
 const P = styled.div`
-    padding-top:50px;
+    position: center;
+    display: flex;
+    justify-content:space-evenly;
+    padding-top: 50px;
     padding-bottom:30px;
-    padding-left:850px; 
+    padding-left:600px; 
     font-size: 50px;
     color:solid white;
     font-family: Gobold High;
@@ -46,16 +49,15 @@ const P = styled.div`
 const Form = styled.form`
     border: solid white;
     /* padding:70px; */
-    margin-left:750px;
-    margin-right:150px;
+    margin-left: 750px;
+    margin-right: 150px;
     height: 21vh;
     `;
 
 const Row1 = styled.div`
     display:flex;
     justify-content: center;
-    padding-top: 20px;
-    
+    padding-top: 20px;  
 `;
 
 const Row2 = styled.div`
@@ -123,7 +125,7 @@ class ModelForm extends Component {
                     <Link to={'/artists'} style={{ textDecoration: 'none', color: 'black' }}>Artists</Link>
                 </Header>
                 <P>
-                    Fill out the form below etc..
+                    Fill out the form below to sign up!
                     </P>
 
                 <Form onSubmit={this.newModel}>
@@ -135,7 +137,7 @@ class ModelForm extends Component {
                             <label htmlFor="photo2">Photo 2:&nbsp;</label>
                         <input id="photo2" name="photo2" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
-                            </Row1>
+                    </Row1>
                     <Row2>
                         <label htmlFor="photo3">Photo 3:&nbsp;</label>
                         <input id="photo3" name="photo3" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
@@ -143,7 +145,7 @@ class ModelForm extends Component {
                             <label htmlFor="photo4">Photo 4:&nbsp;</label>
                         <input id="photo4" name="photo4" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
-                            </Row2>
+                    </Row2>
 
                     <Row3>
                         <label htmlFor="name">Name: &nbsp;</label>
@@ -152,7 +154,7 @@ class ModelForm extends Component {
                             <label htmlFor="dob">DOB:&nbsp;</label>
                         <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
                         &nbsp; &nbsp; &nbsp;
-                            </Row3>
+                    </Row3>
                     <Row4>
                         <label htmlFor="ethnicity">Ethnicity:&nbsp;</label>
                         <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />

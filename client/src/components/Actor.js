@@ -12,6 +12,7 @@ class Actor extends Component {
             dob: '',
             ethnicity: '',
             location: '',
+            url: '',
             _id: ''
         }
     }
@@ -21,6 +22,7 @@ class Actor extends Component {
         copyOfFormInfo.dob = this.props.dob
         copyOfFormInfo.ethnicity = this.props.ethnicity
         copyOfFormInfo.location = this.props.location
+        copyOfFormInfo.url = this.props.url
         copyOfFormInfo._id = this.props._id
         this.setState({
             formInfo: copyOfFormInfo
@@ -71,8 +73,12 @@ class Actor extends Component {
                         <p>DOB: {this.props.dob}</p>
                         <p>Ethnicity: {this.props.ethnicity}</p>
                         <p>Location: {this.props.location}</p>
-                        <p>Photo:</p>
-                        <img src={this.props.photo}/>
+                        <p>Photo1:</p>
+                        <img src={this.props.photo1}/>
+                        <p>Photo2:</p>
+                        <img src={this.props.photo2}/>
+                        <p>Video:</p>
+                        <iframe width="453" height="236" src={this.state.formInfo.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <button onClick={this.swapForm}>Edit Actor</button>
                         <button onClick={this.deleteActor}>Delete Actor</button>
                     </info>

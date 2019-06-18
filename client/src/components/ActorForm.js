@@ -24,44 +24,70 @@ const Header = styled.div`
     `;
 
 const Button = styled.button`
-    height:30px;
+    border: solid white;
+    height: 30px;
     font-size: 20px;
-    background-color: white;
+    background-color: orange;
     text-align: center; 
     margin: 0 auto;
     display: block;
     `;
 
 const P = styled.div`
-    padding:100px; 
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-right: 600px; 
     font-size: 50px;
     position: center;
     display: flex;
-    justify-content:space-evenly;
-    color:solid white;
+    justify-content: space-evenly;
+    color: white;
     font-family: Gobold High;
     `;
 
 const Form = styled.form`
-    border: solid black;
-    padding:70px;
+    border: solid white;
+    height: 22vh;
+    /* padding: 30px; */
     margin-left:150px;
     margin-right:750px;
     `;
 
-const Input = styled.div`
-    display:flex;
+const Row1 = styled.div`
+    display: flex;
     justify-content: center;
-    padding: 30px;
+    padding-top: 20px;   
 `;
 
-const Photos = styled.div`
-    display:flex;
+const Row2 = styled.div`
+    display: flex;
     justify-content: center;
-    padding: 30px;
+    padding-top: 20px;
+`;
+
+const Row3 = styled.div`
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+`;
+
+const Row4 = styled.div`
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
 
 `;
 
+const Label = styled.div`
+    color: white;
+
+`;
+
+const Input = styled.input`
+    width: 300px;
+
+`;
 
 
 
@@ -73,7 +99,9 @@ class ActorForm extends Component {
             dob: '',
             ethnicity: '',
             location: '',
-            photo: ''
+            photo1: '',
+            photo2: '',
+            url: '',
         },
         redirect: false,
     }
@@ -107,17 +135,40 @@ class ActorForm extends Component {
                         <Link to={'/artists'} style={{ textDecoration: 'none', color: 'white' }}>Artists</Link>
                     </Header>
 
+                    <P>
+                    Fill out the form below to sign up!
+                    </P>
+
                     <Form onSubmit={this.newActor}>
-                        <label htmlFor="name">Name:</label>
+                    <Row1>
+                        <Label htmlFor="photo1">Photo 1:&nbsp;</Label>
+                        <input id="photo1" name="photo1" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
+                        &nbsp; &nbsp; &nbsp;
+                        <Label htmlFor="photo2">Photo 2:&nbsp;</Label>
+                        <input id="photo2" name="photo2" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
+                        &nbsp; &nbsp; &nbsp;
+                    </Row1>
+                    <Row2>
+                        <Label htmlFor="name">Name: &nbsp;</Label>
                         <input id="name" name="name" type="text" placeholder="Ex: Jesus Santos" onChange={this.handleChange} />
-                        <label htmlFor="dob">DOB:</label>
+                        &nbsp; &nbsp; &nbsp;
+                        <Label htmlFor="dob">DOB:&nbsp;</Label>
                         <input id="dob" name="dob" placeholder="Ex: 7/12/2010" type="text" onChange={this.handleChange} />
-                        <label htmlFor="ethnicity">Ethnicity:</label>
+                        &nbsp; &nbsp; &nbsp;
+                    </Row2>
+                    <Row3>
+                        <Label htmlFor="ethnicity">Ethnicity:&nbsp;</Label>
                         <input id="ethnicity" name="ethnicity" type="text" placeholder="Ex: White" onChange={this.handleChange} />
-                        <label htmlFor="location">Location:</label>
+                        &nbsp; &nbsp; &nbsp;
+                        <Label htmlFor="location">Location:&nbsp;</Label>
                         <input id="location" name="location" type="text" placeholder="Ex: Houston, Tx" onChange={this.handleChange} />
-                        <label htmlFor="photo">Photo:</label>
-                        <input id="photo" name="photo" type="text" placeholder="Ex: photoUrl" onChange={this.handleChange} />
+                        &nbsp; &nbsp; &nbsp;
+                    </Row3>
+                    <Row4>
+                        <Label htmlFor="url">Video URL:&nbsp; </Label>
+                        <Input id="url" name ="url" type="text" placeholder="Ex. Youtube.com/sample" onchange={this.handlechange}/>
+                        
+                    </Row4>
                         <Button type="submit">Sign Up Actor!</Button>
                     </Form>
                 </Body>

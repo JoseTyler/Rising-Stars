@@ -61,7 +61,9 @@ class ActorList extends Component {
                                 dob={spot.dob}
                                 ethnicity={spot.ethnicity}
                                 location={spot.location}
-                                photo={spot.photo}
+                                photo1={spot.photo1}
+                                photo2={spot.photo2}
+                                url={spot.url}
                                 _id={spot._id}
                                 getActors={this.getActors}
                             />
