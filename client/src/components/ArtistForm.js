@@ -3,6 +3,7 @@ import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import styled from 'styled-components';
 import img from '../images/singer.jpg'
+import font from '../fonts/GoboldHigh.otf'
 
 
 // ArtistForm Component Styling
@@ -22,7 +23,7 @@ const Header = styled.div`
     justify-content:space-between;
     width: 50vw;
     color:solid white;
-    font-family: Gobold High;
+    font-family: ${font};
     margin: 0 auto;
     `;
 
@@ -44,7 +45,7 @@ const P = styled.div`
     display: flex;
     justify-content:space-evenly;
     color:solid white;
-    font-family: Gobold High;
+    font-family: ${font};
     `;
 
 const Form = styled.form`
